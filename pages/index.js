@@ -1,13 +1,18 @@
+import styled from "styled-components";
 import BoxWithClassName from "../components/BoxWithClassName/BoxWithClassName.js";
 import StyledBox from "../components/BoxWithStyledComponents/BoxWithStyledComponents.js";
 
+const StyledDiv = styled.div`
+  display: flex;
+`;
+
 export default function HomePage() {
   return (
-    <div style={{ display: "flex" }}>
-      <BoxWithClassName isBlack={false} />
-      <BoxWithClassName isBlack={true} />
-      <StyledBox $isBlack={false} />
-      <StyledBox $isBlack={true} />
-    </div>
+    <StyledDiv>
+      <BoxWithClassName />
+      <BoxWithClassName isBlack />
+      <StyledBox />
+      <StyledBox $isBlack />
+    </StyledDiv>
   );
 }
